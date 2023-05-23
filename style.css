@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+
+header img{
+    width: 150px;
+}
+
+header nav{
+    display: flex;
+    gap: 20px;
+}
+
+header nav a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-shadow: 2px 2px 10px black;
+    color: white;
+    transition: color .3s;
+}
+
+header nav a:hover{
+    color: black;
+    transition: color .3s;
+    transform:scale(1.1);
+}
+
+/* Welcome-sec background */
+#welcome-sec{
+    background-image: url(images/main.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Welcome-text part */
+.welcome-text{
+    width: 90vw;
+    margin: 200px auto;
+}
+
+.welcome-text h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px black;
+    font-family: 'Inter', sans-serif;
+}
+
+.welcome-text p{
+    font-size: 22px;
+    max-width: 700px;
+    text-align: center;
+    margin: 40px auto;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* Common field for sections */
+section{
+    height: 100vh;
+    width: 100%;
+    background-color: #0a080a;
+}
+
+/* About section */
+#about-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    gap: 100px;
+}
+.left-side{
+    max-width: 400px;
+}
+
+.left-side h1{
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid white;
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-side p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+.left-side p span{
+    border-bottom: 2px solid crimson;
+}
+#about-sec img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+@media (max-width: 1100px){
+    #about-sec{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .left-side h1{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .left-side h4{
+        margin-bottom: 5px;
+    }
+    #about-sec img{
+        max-width: 240px;
+    }
+}
+
+/* Battle section */
+#battle-sec{
+    background-image:radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.9) 70%
+    ),
+    url(images/sec-2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+.heading h5{
+    font-size: 24px;
+    text-align: center;
+}
+
+.heading h1{
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+.boxes{
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 2px;
+}
+
+.boxes .box:nth-child(5){
+    grid-column: auto / span 2;
+}
+
+.box{
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.box h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: crimson;
+    font-weight: 600;
+}
+
+.box p{
+    text-shadow: 2px 2px 10px black;
+}
+
+/* Opinions section */
+#opinions-sec{
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url(images/sec-3.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+/* Left side */
+.opinions-left{
+    max-width: 450px;
+}
+
+.opinions-left h3{
+    font-size: 20px;
+}
+
+.opinions-left h1{
+    font-size: 60px;
+}
+
+.opinions-left p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.opinions-left button{
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+.opinions-left button:hover{
+    background-color: #0a080a;
+    color: crimson;
+    border: 2px solid crimson;
+    transition: all .3s;
+}
+
+/* Right side */
+.opinions-right{
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: end;
+}
+
+.card:nth-child(2){
+    align-self: start;
+}
+
+/* all cards */
+.card{
+    max-width: 400px;
+    background-color: rgba(61, 61, 61, 0.566);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.person-info{
+    display: flex;
+    gap: 10px;
+}
+
+.person-info div h1{
+    color: crimson;
+}
+
+.person-info div p{
+    color: gray;
+}
+
+.comment p{
+    color: gray;
+    margin-top: 5px;
+    font-size: 14px;
+}
